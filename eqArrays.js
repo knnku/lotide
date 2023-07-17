@@ -21,21 +21,9 @@ const eqArrays = function(array1, array2) {
       result = true;
     }
   }
-
-
-  if (result) {
-    console.log(array1, array2, result);
-  } else {
-    console.log(array1, array2, result);
-  }
-
   return result;
 
 };
-
-
-
-
 
 /*
 eqArrays([1, 2, 3], [1, 2, 3]); // => true
