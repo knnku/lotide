@@ -49,25 +49,25 @@ const middle = function(inputArray) {
 
   if (inputArray.length <= 2) {
     return outputArray;
-  } 
+  }
   if (inputArray.length % 2 === 0) { //Even Arrays
-    outputArray = inputArray.slice(inputArray.length/2-1, inputArray.length/2+1)
+    outputArray = inputArray.slice(inputArray.length / 2 - 1, inputArray.length / 2 + 1);
     return outputArray;
   }
   if (inputArray.length % 2 !== 0) { //Odd Arrays
-    outputArray = inputArray.slice(inputArray.length/2, inputArray.length/2+1)
+    outputArray = inputArray.slice(inputArray.length / 2, inputArray.length / 2 + 1);
     return outputArray;
   }
-}
+};
 
-console.log(middle([1,2,3,3,4,4,7,8,9,10])); //Even
-console.log(middle([1,2,3,3,4,4,7,8,9,10,12])); //Odd
-console.log(middle([1,2,3,3,4, NaN, "yot",7,8,9,10,12])); //Even with other types
-assertEqualArrays(outputArray, [NaN, 'yot'])
+console.log(middle([1, 2, 3, 3, 4, 4, 7, 8, 9, 10])); //Even
+console.log(middle([1, 2, 3, 3, 4, 4, 7, 8, 9, 10, 12])); //Odd
+console.log(middle([1, 2, 3, 3, 4, NaN, "yot", 7, 8, 9, 10, 12])); //Even with other types
+assertEqualArrays(outputArray, [NaN, 'yot']);
 
-console.log(middle([1,2,3,4,5])); //Odd
-assertEqualArrays(outputArray, [3])
+console.log(middle([1, 2, 3, 4, 5])); //Odd
+assertEqualArrays(outputArray, [3]);
 
 
-console.log(middle([1,2])); //Length less than 2
-assertEqualArrays(outputArray, [])
+console.log(middle([1, 2])); //Length less than 2
+assertEqualArrays(outputArray, []);

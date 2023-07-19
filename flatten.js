@@ -28,10 +28,10 @@ const flatten = function(inputArray) {
   //Alternative for now as the instructions don't prohibit using array.flat()
   console.log(inputArray.flat(2));
   return inputArray.flat(2);
-}
+};
 
 
-flatten([1,2,3,4,5, "hello", "yo", 1, [1,2,3], [3,2,[1]]]);
+flatten([1, 2, 3, 4, 5, "hello", "yo", 1, [1, 2, 3], [3, 2, [1]]]);
 
-eqArrays(flatten([1,2,3,4,5, "hello", "yo", 1, [1,2,3], [3,2,[1]]]), [1,2,3,4,5, "hello", "yo", 1, 1, 2, 3, 4, 2, 1])
+eqArrays(flatten([1, 2, 3, 4, 5, "hello", "yo", 1, [1, 2, 3], [3, 2, [1]]]), [1, 2, 3, 4, 5, "hello", "yo", 1, 1, 2, 3, 4, 2, 1])
 
