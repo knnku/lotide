@@ -1,4 +1,4 @@
-const assertEqualArrays = function(inputArray, expectedArray) {
+const assertArraysEqual = function(inputArray, expectedArray) {
   if (inputArray.length !== expectedArray.length) {
     console.log("Please input two arrays with the same length.");
     return false;
@@ -25,15 +25,24 @@ const assertEqualArrays = function(inputArray, expectedArray) {
 };
 
 
-const without = function(source, itemsToRemove) {
+const without = function(sourceArray, itemsToRemove) {
   const outputArray = [];
 
-  for (const item of source) {
-    outputArray = source.filter(itemsToRemove.includes(item));
+  for (const item of sourceArray) {
+    if (itemsToRemove.includes(item)) {
+      ;
+    } else {
+      outputArray.push(item);
+    }
   }
-
   return outputArray;
 
 };
 
-console.log(without([1, 2, 3, 4], [2, 3]));
+console.log(without([1, 2, 3, 4, 5, 6, 7], [3, 5]));
+
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); // no need to capture return value for this test case
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
