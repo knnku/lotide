@@ -11,13 +11,15 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(stringCount) {
   outputObject = {};
-  let removeSpace = stringCount.replace(/[ ,.]/g, "");
 
-  for (const letter of removeSpace) {
+  for (const letter of stringCount) {
     if (outputObject[letter]){
       outputObject[letter] += 1;
     } else {
-      outputObject[letter] = 1;
+      if (letter !== " " && letter !== "."){
+        outputObject[letter] = 1;
+      }
+      
     }
   }
   return outputObject;
