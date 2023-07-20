@@ -16,7 +16,7 @@ const countLetters = function(stringCount) {
     if (outputObject[letter]){
       outputObject[letter] += 1;
     } else {
-      if (letter !== " " && letter !== "."){
+      if (letter !== " " && letter !== "."){ //Skip spaces and periods
         outputObject[letter] = 1;
       }
       
@@ -26,5 +26,10 @@ const countLetters = function(stringCount) {
 }
 
 const string1 = "The quick brown fox jumps over the lazy dog.";
+const test = countLetters(string1);
 
+//Assertion Tests
 console.log(countLetters(string1));
+assertEqual(test["T"], 1);
+assertEqual(test["e"], 3);
+assertEqual(test["yy"], 3);
