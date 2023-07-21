@@ -1,4 +1,4 @@
-const eqArrays = function(inputArray, expectedArray) {
+const assertArraysEqual = function(inputArray, expectedArray) {
   if (inputArray.length !== expectedArray.length) {
     console.log("Please input two arrays with the same length.");
     return false;
@@ -25,7 +25,8 @@ const eqArrays = function(inputArray, expectedArray) {
 };
 
 
-eqArrays([1, 2, 3], [1, 2, 3]); // => true
-eqArrays([1, 2, 3], [3, 2, 1]); // => false
-eqArrays([1, 2, 3], [1, 2, "3"]); // => true
-eqArrays([1, 2, 3], [1, 2, 3, 4]); // => true
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
+assertArraysEqual([1, 2, 3], [1, 2, "3"]); // => false
+assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // => error, arrays not equal
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
