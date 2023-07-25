@@ -12,10 +12,10 @@ const eqArrays = function (array1, array2) {
 };
 
 const assertArraysEqual = function (actual, expected) {
-  if (actual) {
-    console.log(`✅ Array Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 Array Assertion Failed: ${actual} !== ${expected}`);
+  if (!eqArrays(actual, expected)) {
+    return console.log(`🛑 Array Assertion Failed: ${actual} !== ${expected}`);
+  } else if (eqArrays) {
+    return console.log(`✅ Array Assertion Passed: ${actual} === ${expected}`);
   }
 };
 
@@ -31,10 +31,10 @@ const words = ["ground", "control", "to", "major", "tom"];
 const results1 = map(words, (word) => word[0]);
 console.log(results1);
 
-assertArraysEqual(eqArrays(results1, ["g", "c", "t", "m", "t"]), true);
-assertArraysEqual(eqArrays(results1, ["g", "c", "C", "m", "t"]), false);
-assertArraysEqual(eqArrays(words, ["ground", "control", "to", "major", "tom"]), true);
-assertArraysEqual(eqArrays(results1, ["g", "c", "c", "m", 1]), false);
+assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
+assertArraysEqual(results1, ["g", "c", "C", "m", "t"]);//fail
+assertArraysEqual(words, ["ground", "control", "to", "major", "tom"]);//pass
+assertArraysEqual(results1, ["g", "c", "c", "m", 1]);//fail
 
 
 
