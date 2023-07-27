@@ -48,10 +48,10 @@ const assertObjectsEqual = function (actual, expected) {
   }
 };
 
-const obj1 = { size: "small", color: "brown" };
-const obj2 = { size: "small", color: "brown" };
-assertObjectsEqual(obj1, obj2);
+// const obj1 = { size: "small", color: "brown" };
+// const obj2 = { size: "small", color: "brown" };
+// assertObjectsEqual(obj1, obj2);
 
-const obj3 = { size: "small", qty: [1, 2], color: "brown" }; //with equal arrays; true
-const obj4 = { size: "small", qty: [1, 2], color: "brown" };
-assertObjectsEqual(obj3, obj4);
+// const obj3 = { size: "small", qty: [1, 2], color: "brown" }; //with equal arrays; true
+// const obj4 = { size: "small", qty: [1, 2], color: "brown" };
+// assertObjectsEqual(obj3, obj4);
