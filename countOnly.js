@@ -1,44 +1,17 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-
-const countOnly = function(inputArray, objectToCount) {
-
+const countOnly = function (inputArray, objectToCount) {
   const results = {};
   for (const item of inputArray) {
-    console.log(item);
+    //Iterate over an array and count what is selected in the other array passed.
     if (objectToCount[item]) {
-      if (results[item]) {
+      //Matches the value of the selection and check if it is true or false, if true, count.
+      if (results[item]) { // If value exist add 1
         results[item] += 1;
-      } else {
+      } else { //If value does not exist, create and add 1
         results[item] = 1;
       }
     }
   }
-  console.log(results); //Print result object.
   return results;
 };
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+module.exports = countOnly;
