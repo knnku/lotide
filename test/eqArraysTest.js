@@ -1,4 +1,4 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const eqArrays = require('../eqArrays')
 
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
@@ -8,3 +8,4 @@ console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"]));  // => true
 console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
 
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => should PASS
+ 
