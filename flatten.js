@@ -4,6 +4,6 @@ const flatten = function(inputArray) {
   return inputArray.flat(2);
 };
 
-export.modules = flatten;
+module.exports = flatten;
 
 
