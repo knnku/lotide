@@ -1,3 +1,5 @@
+const eqArrays = require('./eqArrays');
+
 const eqObjects = function (object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     console.log("Please input two objects with the same length.");
@@ -11,7 +13,6 @@ const eqObjects = function (object1, object2) {
         return false;
       }
     } else if (object1[key] !== object2[key]) {
-      console.log(`${object1[key]} != ${object2[key]}`);
       return false;
     }
   }
