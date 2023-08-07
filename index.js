@@ -7,6 +7,9 @@ const findKeyByValue = require("./findKeyByValue");
 const flatten = require("./flatten");
 const eqObjects = require("./eqObjects");
 const eqArrays = require("./eqArrays");
+const without = require("./without");
+const takeUntil = require("./takeUntil");
+const findKeyByValue = require("./findKeyByValue");
 
 module.exports = {
   head,
@@ -18,4 +21,8 @@ module.exports = {
   flatten,
   eqObjects,
   eqArrays,
+  without,
+  takeUntil,
+  findKeyByValue,
+
 };
